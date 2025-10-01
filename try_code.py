@@ -36,7 +36,11 @@ if uploaded_file:
     # Example: Wikipedia Integration
     st.write("**Wikipedia Info**")
     wiki_wiki = wikipediaapi.Wikipedia('en')
-    page = wiki_wiki.page("Andromeda Galaxy")
+    wiki_wiki = wikipediaapi.Wikipedia(
+    language='en',
+    user_agent='astro-image-explorer/1.0 (contact: your_email@example.com)'
+)
+
     if page.exists():
         st.write(page.summary[:500])
     else:
@@ -49,3 +53,4 @@ st.markdown("""
 ---
 **Tip:** Use the sidebar for API keys and advanced options!
 """)
+
