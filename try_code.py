@@ -38,7 +38,7 @@ if uploaded_file:
     wiki_wiki = wikipediaapi.Wikipedia('en')
     wiki_wiki = wikipediaapi.Wikipedia(
     language='en',
-    user_agent='astro-image-explorer/1.0 (contact: your_email@example.com)'
+    user_agent='astro-image-explorer/1.0 (contact: https://github.com/Shashikant4471/astro-image-explorer)'
 )
 
     if page.exists():
@@ -53,4 +53,5 @@ st.markdown("""
 ---
 **Tip:** Use the sidebar for API keys and advanced options!
 """)
+
 
